@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NerdNest</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .product button {
+            background-color: #4a1017; /* Green */
+            border: none;
+            color: white;
+            padding: 10px 20px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin-top: 10px;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+        .cart {
+            position: absolute;
+            top: 30px;
+            right: 20px;
+            background-color: #060568; /* Green */
+            color: white;
+            padding: 20px 20px;
+            text-decoration: none;
+            border-radius: 3px;
+        }
+        .description-popup {
+            display: none;
+            position: absolute;
+            top: 0%;
+            left: 0;
+            right: 0;
+            bottom: 50%;
+            background-color: rgba(255, 255, 255, 0.9);
+            padding: 10px;
+            font-size: larger;
+            text-decoration-thickness: 4px;
+            text-align: center;
+            border: 1px solid #ddd;
+            box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.1);
+            z-index: 10;
+        }
+        .product:hover .description-popup {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="#" class="cart">Cart (<span id="cart-count">0</span>)</a>
+            <div class="logo"><h3>NerdNest</h3></div>
+            <ul class="nav-links">
+                <li><h3>Home<br></h3></li>
+                <li><h3>Shop<br></h3></li>
+                <li><h3>About<br></h3></li>
+                <li><h3>Contact<br></h3></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section>
+        <div class="hero">
+            <h1>Welcome to Our Computer Collection</h1>
+            <h3>Build Up Your Own PC</h3>
+        </div>
+    </section>
+
+    <section class="featured-products">
+        <h2>Featured Products</h2>
+        <div class="product-grid">
+            <div class="product">
+                <img src="/Images/1.jpg" alt="Product 1">
+                <h3>Product 1</h3>
+                <p>$40.99</p>
+                <div class="description-popup">Sleek ASUS monitor with vibrant display, ideal for professional use and multimedia applications..</div>
+                <button onclick="addToCart()">Add to Cart</button>
+            </div>
+            <div class="product">
+                <img src="/Images/2.webp" alt="Product 2">
+                <h3>Product 2</h3>
+                <p>$45.99</p>
+                <div class="description-popup">High-resolution Samsung monitor showcasing stunning sunset imagery, perfect for creative tasks.</div>
+                <button onclick="addToCart()">Add to Cart</button>
+            </div>
+            <div class="product">
+                <img src="/Images/3.jpg" alt="Product 3">
+                <h3>Product 3</h3>
+                <p>$49.99</p>
+                <div class="description-popup">Modern desktop tower with RGB fan, designed for high-performance computing and gaming.</div>
+                <button onclick="addToCart()">Add to Cart</button>
+            </div>
+            <div class="product">
+                <img src="/Images/4.webp" alt="Product 3">
+                <h3>Product 4</h3>
+                <p>$49.99</p>
+                <div class="description-popup">A sleek black computer case with a red accent, featuring a vibrant RGB fan and multiple ports on top.</div>
+                <button onclick="addToCart()">Add to Cart</button>
+            </div>
+            <div class="product">
+                <img src="/Images/5.jpg" alt="Product 3">
+                <h3>Product 5</h3>
+                <p>$49.99</p>
+                <div class="description-popup">Black mid-tower case with tempered glass side panel, featuring three vibrant RGB fans and multiple ports on top.</div>
+                <button onclick="addToCart()">Add to Cart</button>
+            </div>
+            <div class="product">
+                <img src="/Images/6.jpg" alt="Product 3">
+                <h3>Product 6</h3>
+                <p>$49.99</p>
+                <div class="description-popup">Black graphics card with three fans, featuring Gigabyte and GeForce RTX 4060 branding.</div>
+                <button onclick="addToCart()">Add to Cart</button>
+            </div>
+            <div class="product">
+                <img src="/Images/7.jpg" alt="Product 3">
+                <h3>Product 7</h3>
+                <p>$49.99</p>
+                <div class="description-popup">Black graphics card with two fans, featuring Gigabyte and GeForce GTX 1650 branding.</div>
+                <button onclick="addToCart()">Add to Cart</button>
+            </div>
+            <div class="product">
+                <img src="/Images/8.png" alt="Product 3">
+                <h3>Product 8</h3>
+                <p>$49.99</p>
+                <div class="description-popup">Silver and black graphics card with two fans, featuring NVIDIA GeForce RTX 2080 branding.</div>
+                <button onclick="addToCart()">Add to Cart</button>
+            </div>
+            <div class="product">
+                <img src="/Images/9.jpg" alt="Product 3">
+                <h3>Product 9</h3>
+                <p>$49.99</p>
+                <div class="description-popup">MSI GeForce GTX 1660 Super Gaming X graphics card with dual fans and RGB lighting.</div>
+                <button onclick="addToCart()">Add to Cart</button>
+            </div>
+            <div class="product">
+                <img src="/Images/10.jpg" alt="Product 3">
+                <h3>Product 10</h3>
+                <p>$49.99</p>
+                <div class="description-popup">Black graphics card with dual fans, featuring INNO3D and GeForce GTX 1630 branding.
+                </div>
+                <button onclick="addToCart()">Add to Cart</button>
+            </div>
+            <div class="product">
+                <img src="/Images/11.jpg" alt="Product 3">
+                <h3>Product 11</h3>
+                <p>$49.99</p>
+                <div class="description-popup">Black graphics card with a single axial fan, featuring RTX 3080 and NVIDIA branding.</div>
+                <button onclick="addToCart()">Add to Cart</button>
+            </div>
+            <div class="product">
+                <img src="/Images/12.jpg" alt="Product 3">
+                <h3>Product 12</h3>
+                <p>$49.99</p>
+                <div class="description-popup">Black box with orange accents, featuring AMD Ryzen 5 logo and processor details.</div>
+                <button onclick="addToCart()">Add to Cart</button>
+            </div>
+            <div class="product">
+                <img src="/Images/13.png" alt="Product 3">
+                <h3>Product 13</h3>
+                <p>$49.99</p>
+                <div class="description-popup">Blue box with white Intel Core i9 logo, indicating a 12th generation unlocked processor.</div>
+                <button onclick="addToCart()">Add to Cart</button>
+            </div>
+            <div class="product">
+                <img src="/Images/14.webp" alt="Product 3">
+                <h3>Product 14</h3>
+                <p>$49.99</p>
+                <div class="description-popup">AMD Ryzen 5 4500 boxed desktop processor with 6 cores, 12 threads, and 3-year warranty.</div>
+                <button onclick="addToCart()">Add to Cart</button>
+            </div>
+            <div class="product">
+                <img src="/Images/15.jpg" alt="Product 3">
+                <h3>Product 15</h3>
+                <p>$49.99</p>
+                <div class="description-popup">Intel Core i5 10th generation processor box with blue background and white text.</div>
+                <button onclick="addToCart()">Add to Cart</button>
+            </div>
+            <div class="product">
+                <img src="/Images/16.jpg" alt="Product 3">
+                <h3>Product 16</h3>
+                <p>$49.99</p>
+                <div class="description-popup">Blue box with white Intel Core i7 logo, indicating an unlocked 3770K processor.</div>
+                <button onclick="addToCart()">Add to Cart</button>
+            </div>
+            <div class="product">
+                <img src="/Images/17.jpg" alt="Product 3">
+                <h3>Product 17</h3>
+                <p>$4.99</p>
+                <div class="description-popup">Transparent keyboard with 84 keys, featuring orange and white keycaps and a plastic case.</div>
+                <button onclick="addToCart()">Add to Cart</button>
+            </div>
+            <div class="product">
+                <img src="/Images/18.webp" alt="Product 3">
+                <h3>Product 18</h3>
+                <p>$5.99</p>
+                <div class="description-popup">Compact wireless keyboard with round keys in pink and beige, featuring Logitech branding and dedicated emoji keys.</div>
+                <button onclick="addToCart()">Add to Cart</button>
+            </div>
+            <div class="product">
+                <img src="/Images/19.webp" alt="Product 3">
+                <h3>Product 19</h3>
+                <p>$4.99</p>
+                <div class="description-popup">Black 60% keyboard with RGB backlighting, featuring a compact layout and wired connection.</div>
+                <button onclick="addToCart()">Add to Cart</button>
+            </div>
+            <div class="product">
+                <img src="/Images/20.webp" alt="Product 3">
+                <h3>Product 20</h3>
+                <p>$9.99</p>
+                <div class="description-popup">Black keyboard with RGB backlighting, featuring a full layout and a wired connection.</div>
+                <button onclick="addToCart(  )">Add to Cart</button>
+            </div>
+            <!-- Add more products as needed -->
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 24x7Open. All rights reserved.</p>
+    </footer>
+
+    <script>
+        let cartCount = 0;
+
+        function addToCart() {
+            cartCount++;
+            document.getElementById('cart-count').textContent = cartCount;
+        }
+    </script>
+</body>
+</html>
